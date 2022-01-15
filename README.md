@@ -1,17 +1,40 @@
 # create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Demo SvelteKit project: [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
-## Creating a project
+## Running
 
-If you're seeing this, you've probably already done this step. Congrats!
+View the application: `npm run dev -- --open`
+
+
+
+## Prerequisites
+
+### cloudflare account
+
+### npm install
+
+You need `npm` installed which I did by first installing `nvm`
+
+### gh install
+
+I use the github command line tool `gh`
+
+### install svelte adapter
+
+After cloning this repo you first need to run
+`npm install @sveltejs/adapter-static@next --save-dev`
+
+## Creating a new project like this
+
+Steps for how this repo was created:
 
 ```bash
 # create a new project in the current directory
 npm init svelte@next
 
-# create a new project in my-app
-npm init svelte@next my-app
+# create a new project in new-project-name
+npm init svelte@next new-project-name
 ```
 
 > Note: the `@next` is temporary
