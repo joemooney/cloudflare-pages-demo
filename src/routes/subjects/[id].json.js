@@ -1,5 +1,8 @@
 export async function get({ params }) {
 
+    console.log("get data for an id");
+    console.log("loading data for id", params.id);
+
     const subjects = [
         { id: 1, title: 'title 1', body: 'lorem ipsum' },
         { id: 2, title: 'title 2', body: 'lorem ipsum' },
@@ -11,14 +14,16 @@ export async function get({ params }) {
     const subject = subjects.find((s) => s.id == params.id)
 
     if (subject) {
+        console.log("found data for id", params.id);
         return {
             status: 200,
             body: { subject },
         }
     }
+    console.log("did not find data for id", params.id);
     return {
         status: 301,
-        redirect: '/guides'
+        redirect: '/subjects'
     }
     
 }

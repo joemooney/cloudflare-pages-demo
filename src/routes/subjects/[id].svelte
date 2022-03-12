@@ -3,12 +3,14 @@
         // id from the route [id].svelete
         const id = params.id;
         console.log("fetching data for id", id);
+        console.log("Fetching data for id", id);
         // without backticks it is plain text
         // with backtick it is template variable and ${id} gets substituted
         // const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
         // const subject = await res.json();
-        const res = await fetch(`/subjects/${id}`);
-        const subject = await res.json();
+        const res = await fetch(`/subjects/${id}.json`);
+        // the braces are necessary to destructure the json into the inner contents
+        const { subject } = await res.json();
         if (res.ok) {
             return {
                 props: {
