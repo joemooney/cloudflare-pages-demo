@@ -3,7 +3,7 @@ export async function get({ params }) {
     console.log("get data for an id");
     console.log("loading data for id", params.id);
 
-    const subjects = [
+    const data = [
         { id: 1, title: 'title 1', body: 'lorem ipsum' },
         { id: 2, title: 'title 2', body: 'lorem ipsum' },
         { id: 3, title: 'title 3', body: 'lorem ipsum' },
@@ -11,19 +11,19 @@ export async function get({ params }) {
         { id: 5, title: 'title 5', body: 'lorem ipsum' },
     ]
 
-    const subject = subjects.find((s) => s.id == params.id)
+    const datum = data.find((s) => s.id == params.id)
 
-    if (subject) {
+    if (datum) {
         console.log("found data for id", params.id);
         return {
             status: 200,
-            body: { subject },
+            body: { datum },
         }
     }
     console.log("did not find data for id", params.id);
     return {
         status: 301,
-        redirect: '/subjects'
+        redirect: '/data'
     }
     
 }

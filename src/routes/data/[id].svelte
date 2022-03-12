@@ -7,35 +7,35 @@
         // without backticks it is plain text
         // with backtick it is template variable and ${id} gets substituted
         // const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-        // const subject = await res.json();
-        const res = await fetch(`/subjects/${id}.json`);
+        // const datum = await res.json();
+        const res = await fetch(`/data/${id}.json`);
         // the braces are necessary to destructure the json into the inner contents
-        const { subject } = await res.json();
+        const { datum } = await res.json();
         if (res.ok) {
             return {
                 props: {
-                    subject
+                    datum
                 }
             }
         }
         // redirecting in case of not found
         return {
             status: 301, // redirect status
-            redirect: "/subjects"
+            redirect: "/data"
         }
     }
 </script>
 <script>
-    export let subject;
+    export let datum;
 </script>
 
-<div class="subject">
-    <h2>{subject.title}</h2>
-    <p>{subject.body}</p>
+<div class="datum">
+    <h2>{datum.title}</h2>
+    <p>{datum.body}</p>
 </div>
 
 <style>
-    .subject {
+    .datum {
         margin-top: 40px;
         padding: 10px;
         border: 1px dotted rgba(255,255,255,0.2);

@@ -13,7 +13,7 @@
 <div class="error">
     <h2>Missing</h2>
     <p>{message}</p>
-    <a href="/subjects">View all subjects</a>
+    <a href="/data">View all data</a>
 </div>
 <style>
     .error {

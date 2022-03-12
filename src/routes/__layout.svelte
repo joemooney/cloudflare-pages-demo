@@ -4,14 +4,14 @@ import '../styles/global.css'
 </script>
 
 <header>
-    <Title title="Secret Worlds"/>
+    <Title title="Data"/>
 </header>
 <main>
     <!-- page content -->
     <slot></slot>
 </main>
 <footer>
-    <p>Secret Worlds 2022</p>
+    <p></p>
 </footer>
 
 <style>

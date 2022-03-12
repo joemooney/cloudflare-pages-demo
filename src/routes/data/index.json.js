@@ -3,7 +3,7 @@
 
 export async function get() {
 
-    const subjects = [
+    const data = [
         { id: 1, title: 'title 1', body: 'lorem ipsum' },
         { id: 2, title: 'title 2', body: 'lorem ipsum' },
         { id: 3, title: 'title 3', body: 'lorem ipsum' },
@@ -13,7 +13,7 @@ export async function get() {
 
     return {
         status: 200,
-        body: { subjects },
+        body: { data },
     }
     
 }

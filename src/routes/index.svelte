@@ -1,12 +1,12 @@
 <script>
 
-    let title = "Secret Door"
-    let user = "anonymous"
+    let title = "Data"
+    let user = ""
     const updateTitle = () => {
-        title = user + ", you have entered the Secret World!"
+        title = user + " welcome"
     }
     const updateName = () => {
-        title = "Welcome to the Secret World, " + user
+        title = user + "Data"
     }
 
 </script>
@@ -15,12 +15,12 @@
 
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nisi assumenda consectetur asperiores totam omnis rerum nemo at. Laudantium aspernatur, maxime soluta sit ratione quasi voluptatem. Labore porro pariatur saepe!
 </p>
+<button on:click={updateTitle}>Enter Id</button>
 <input bind:value={user} on:change={updateName}>
 <p>
-<button on:click={updateTitle}>Enter</button>
 </p>
 
-<a href="/subjects">Subjects</a>
+<a href="/data">Data</a>
 <a href="/about">About</a>
 
 </div>

@@ -6,11 +6,11 @@ import '../../styles/global.css'
 
 <header>
     <nav>
-        <Title title="Secret Worlds Subjects"/>
+        <Title title="Data"/>
         <div class="links">
             <a href="/">Home</a>
             <a href="/about">About</a>
-            <a href="/subjects">Subjects</a>
+            <a href="/data">Index</a>
         </div>
     </nav>
 </header>
@@ -20,7 +20,7 @@ import '../../styles/global.css'
     <slot></slot>
 </main>
 <footer>
-    <p>Secret Worlds 2022</p>
+    <p></p>
 </footer>
 
 <style>

@@ -4,30 +4,30 @@
     export async function load({ fetch }) {
         // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
         // const subjects = await res.json();
-        const res = await fetch('/subjects.json');
-        const { subjects } = await res.json();
+        const res = await fetch('/data.json');
+        const { data } = await res.json();
         // console.log(subjects)
         if (res.ok) {
             return {
                 props: {
-                    subjects
+                    data
                 }
             }
         }
         return {
-            status: res.status,
-            error: new Error("Could not fetch the subjects")
+            status: res.data,
+            error: new Error("Could not fetch data")
         }
     }
 </script>
 <script>
-    export let subjects;
+    export let data;
 </script>
-<div class='subjects'>
+<div class='data'>
     <ul>
-        {#each subjects as subject}
+        {#each data as datum}
         <!-- with prefetch hovering over a link will trigger a prefetch -->
-        <li><a sveltekit:prefetch href={`/subjects/${subject.id}`}>{subject.title}</a></li>
+        <li><a sveltekit:prefetch href={`/data/${datum.id}`}>{datum.title}</a></li>
         {/each}
     </ul>
 </div>
