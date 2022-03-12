@@ -1,0 +1,29 @@
+<script>
+import Title from "$lib/title.svelte";
+import '../styles/global.css'
+</script>
+
+<header>
+    <Title title="Secret Worlds"/>
+</header>
+<main>
+    <!-- page content -->
+    <slot></slot>
+</main>
+<footer>
+    <p>Secret Worlds 2022</p>
+</footer>
+
+<style>
+    header {
+        display: flex;
+        justify-content: center;
+    }
+    main {
+        max-width: 960px;
+        margin: 20px auto;
+    }
+    footer {
+        text-align: center;
+    }
+</style>

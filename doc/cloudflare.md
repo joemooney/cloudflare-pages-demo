@@ -6,21 +6,11 @@ For persistent data storage you can then use cloudflare workers and other free o
 
 Demo SvelteKit project: [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
-## SvelteKit
-
-### Benefits of SvelteKit over Svelte
-
-o Server and client-side rendering allow for faster loading
-o Better integration with SEO (search engine optimization)
-o Built using Vite which provides the http server
-
-Pages are represented as components in svelte
-
-
-
 ## Running
 
 View the application: `npm run dev -- --open`
+
+
 
 ## Prerequisites
 
